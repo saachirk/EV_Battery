@@ -1,0 +1,54 @@
+{
+  "dataset_file": "ev_battery_test_data (1).xlsx",
+  "target_column": "fault_label",
+  "feature_order": {
+    "model_a": [
+      "voltage_V",
+      "current_A",
+      "battery_temp_C"
+    ],
+    "model_b": [
+      "voltage_V",
+      "current_A",
+      "battery_temp_C",
+      "ambient_temp_C",
+      "humidity_pct"
+    ]
+  },
+  "comparison": [
+    {
+      "model": "Model A (battery only)",
+      "accuracy": 0.9833,
+      "precision": 0.9804,
+      "recall": 1.0,
+      "f1_score": 0.9901,
+      "confusion_matrix": [
+        [
+          9,
+          1
+        ],
+        [
+          0,
+          50
+        ]
+      ]
+    },
+    {
+      "model": "Model B (battery + environment)",
+      "accuracy": 0.9833,
+      "precision": 0.9804,
+      "recall": 1.0,
+      "f1_score": 0.9901,
+      "confusion_matrix": [
+        [
+          9,
+          1
+        ],
+        [
+          0,
+          50
+        ]
+      ]
+    }
+  ]
+}
